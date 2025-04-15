@@ -700,7 +700,7 @@ export const sidebar: Sidebar = [
                   { text: 'Popups', link: '/identity/smart-wallet/concepts/usage-details/popups' },
                   {
                     text: 'Simulations',
-                    link: '/identity/smart-wallet/concepts/usage-details/Simulations',
+                    link: '/identity/smart-wallet/concepts/usage-details/simulations',
                   },
                   {
                     text: 'Gas Usage',
@@ -738,7 +738,26 @@ export const sidebar: Sidebar = [
               },
               {
                 text: 'Sub Accounts',
+                collapsed: true,
                 link: '/identity/smart-wallet/guides/sub-accounts',
+                items: [
+                  {
+                    text: 'Project Setup',
+                    link: '/identity/smart-wallet/guides/sub-accounts/setup',
+                  },
+                  {
+                    text: 'Creating Sub Accounts',
+                    link: '/identity/smart-wallet/guides/sub-accounts/creating-sub-accounts',
+                  },
+                  {
+                    text: 'Using Sub Accounts',
+                    link: '/identity/smart-wallet/guides/sub-accounts/using-sub-accounts',
+                  },
+                  {
+                    text: 'Incorporate Spend Permissions',
+                    link: '/identity/smart-wallet/guides/sub-accounts/incorporate-spend-permissions',
+                  },
+                ],
               },
               {
                 text: 'Spend Permissions',
