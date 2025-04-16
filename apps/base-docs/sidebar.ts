@@ -627,6 +627,10 @@ export const sidebar: Sidebar = [
                 text: 'React Native Project',
                 link: '/identity/smart-wallet/quickstart/react-native-project',
               },
+              {
+                text: 'AI Tools',
+                link: '/identity/smart-wallet/quickstart/ai-tools-available-for-devs',
+              },
             ],
           },
           {
@@ -931,7 +935,7 @@ export const sidebar: Sidebar = [
                 ],
               },
               {
-                text: 'Sub Account Reference',
+                text: 'Sub Accounts Reference',
                 link: '/identity/smart-wallet/technical-reference/sdk/sub-account-reference',
               },
             ],
