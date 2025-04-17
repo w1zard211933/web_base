@@ -1037,6 +1037,10 @@ export const sidebar: Sidebar = [
         ],
       },
       {
+        text: 'Flashblocks',
+        link: '/chain/flashblocks',
+      },
+      {
         text: 'Base Contracts',
         link: '/chain/base-contracts',
       },
