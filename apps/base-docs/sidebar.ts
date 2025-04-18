@@ -81,6 +81,10 @@ export const sidebar: Sidebar = [
                 text: 'Use AI-powered IDEs',
                 link: '/builderkits/onchainkit/guides/using-ai-powered-ides',
               },
+              {
+                text: 'AI Prompting Guide',
+                link: '/builderkits/onchainkit/guides/ai-prompting-guide',
+              },
             ],
           },
           {
