@@ -778,6 +778,11 @@ export const sidebar: Sidebar = [
                     link: '/identity/smart-wallet/guides/sub-accounts/using-sub-accounts',
                   },
                   {
+
+                    text: 'Using Sub Accounts with Privy',
+                    link: '/identity/smart-wallet/guides/sub-accounts/sub-accounts-with-privy',
+                  },
+                  {
                     text: 'Add Sub Accounts to OnchainKit/MiniKit',
                     link: '/identity/smart-wallet/guides/sub-accounts/add-sub-accounts-to-onchainkit-minikit',
                   },
