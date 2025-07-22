@@ -110,7 +110,11 @@ export function Section({ content, children, className, disableWrapperAnimation 
                   <Link href={content.cta.href}>{content.cta.label}</Link>
                 </Button> */}
                 <Link href={content.cta.href}>
-                  <AnimatedButton text={content.cta.label} />
+                  <AnimatedButton
+                    text={content.cta.label}
+                    backgroundColor="#0000ff20"
+                    textColor="#0000ff"
+                  />
                 </Link>
               </motion.div>
             )}

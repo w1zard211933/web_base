@@ -5,6 +5,7 @@ type AnimatedButtonProps = {
   backgroundColor?: string;
   textColor?: string;
   ghost?: boolean;
+  halfGhost?: boolean;
 };
 
 export default function AnimatedButton({
@@ -12,6 +13,7 @@ export default function AnimatedButton({
   backgroundColor = '#0000ff',
   textColor = '#ffffff',
   ghost = false,
+  halfGhost = false,
 }: AnimatedButtonProps) {
   return (
     <button
@@ -22,6 +24,8 @@ export default function AnimatedButton({
         style={{ backgroundColor }}
         className={`pointer-events-none absolute inset-0 h-full w-full ${
           ghost ? 'opacity-0' : 'opacity-100'
+        } ${
+          halfGhost ? 'opacity-50' : 'opacity-100'
         } transition-opacity duration-200 group-hover:opacity-100`}
       />
       <div className="flex overflow-visible z-10 justify-end items-center w-5 h-5 transition-all duration-300 group-hover:w-0 group-hover:opacity-0 group-hover:blur-sm">
