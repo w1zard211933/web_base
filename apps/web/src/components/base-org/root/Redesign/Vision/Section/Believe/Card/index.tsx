@@ -59,7 +59,7 @@ export function Card({ content }: { content: CardContent }) {
           viewport={viewport}
         >
           <motion.div variants={itemContentVariants}>
-            <Title level={TitleLevel.H5Regular}>{content.title}</Title>
+            <Title level={TitleLevel.H6Regular}>{content.title}</Title>
           </motion.div>
           <motion.div variants={itemContentVariants}>
             <Title level={TitleLevel.H6Regular} className="!text-base-gray-200">

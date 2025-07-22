@@ -1,6 +1,8 @@
 import Container from 'apps/web/src/components/base-org/Container';
 import AsciiFluidScene from 'apps/web/src/components/WebGL/Scenes/AsciiFluidScene';
 import defaultImg from 'apps/web/public/images/backgrounds/default.webp';
+import spaceImg from 'apps/web/public/images/backgrounds/space2.webp';
+import spaceCropImg from 'apps/web/public/images/backgrounds/space-crop.webp';
 import { AnimatedTitle } from 'apps/web/src/components/base-org/root/Redesign/Hero/AnimatedTitle';
 
 export function Hero() {
@@ -10,13 +12,17 @@ export function Hero() {
         <AnimatedTitle />
 
         <div className="absolute inset-0">
-          <div className="h-full w-full">
+          <div className="w-full h-full">
             <AsciiFluidScene
-              className="flex h-full w-full"
-              imageUrl={defaultImg.src}
+              className="flex w-full h-full"
+              imageUrl={spaceCropImg.src}
               enableInteractivity
               radius={0.35}
               velocityDissipation={0.9}
+              altPattern={{
+                url: '/patterns/pat-strip.png',
+                columns: 6,
+              }}
             />
           </div>
         </div>

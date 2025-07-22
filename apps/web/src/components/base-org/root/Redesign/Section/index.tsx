@@ -1,12 +1,15 @@
 'use client';
 
 import Title from 'apps/web/src/components/base-org/typography/TitleRedesign';
+import Text from 'apps/web/src/components/base-org/typography/TextRedesign';
+import { TextVariant } from 'apps/web/src/components/base-org/typography/TextRedesign/types';
 import { TitleLevel } from 'apps/web/src/components/base-org/typography/TitleRedesign/types';
 import {
   Button,
   ButtonSizes,
   ButtonVariants,
 } from 'apps/web/src/components/Button/Redesign/Button';
+import AnimatedButton from 'apps/web/src/components/Button/AnimatedButton';
 import Image from 'next/image';
 import { motion, Variants, cubicBezier } from 'motion/react';
 import Link from 'apps/web/src/components/Link';
@@ -75,7 +78,7 @@ export function Section({ content, children, className, disableWrapperAnimation 
   return (
     <Container className={classNames('relative lg:py-40', className)}>
       <WrapperComponent
-        className="col-span-full grid grid-cols-9 gap-x-[min(2.25vw,_32px)] gap-y-8"
+        className="col-span-full grid grid-cols-12 gap-x-[min(2.25vw,_32px)] gap-y-8"
         {...(!disableWrapperAnimation && {
           variants: contentVariants,
           initial: 'hidden',
@@ -83,36 +86,51 @@ export function Section({ content, children, className, disableWrapperAnimation 
           viewport: viewport,
         })}
       >
-        {content.prefix && (
-          <motion.div {...itemProps} className="col-span-full">
-            <Image
-              src={content.prefix.src}
-              alt={content.prefix.alt}
-              width={content.prefix.width}
-              height={content.prefix.height}
-              draggable={false}
-            />
-          </motion.div>
-        )}
-        <motion.div {...itemProps} className="col-span-full lg:col-span-7">
-          <Title level={TitleLevel.H4Regular} as="h2">
+        <div className="flex col-span-full justify-between items-center">
+          {content.prefix && (
+            <motion.div {...itemProps} className="col-span-full">
+              <Image
+                src={content.prefix.src}
+                alt={content.prefix.alt}
+                width={content.prefix.width}
+                height={content.prefix.height}
+                draggable={false}
+              />
+            </motion.div>
+          )}
+          <div>
+            {content.cta?.label && (
+              <motion.div {...itemProps} className="block col-span-full sm:col-span-3">
+                {/* <Button
+                  variant={ButtonVariants.Secondary}
+                  asChild
+                  fullWidth={false}
+                  size={ButtonSizes.Large}
+                >
+                  <Link href={content.cta.href}>{content.cta.label}</Link>
+                </Button> */}
+                <Link href={content.cta.href}>
+                  <AnimatedButton text={content.cta.label} />
+                </Link>
+              </motion.div>
+            )}
+          </div>
+        </div>
+        <motion.div {...itemProps} className="col-span-full lg:col-span-6 lg:max-w-[450px]">
+          <Title
+            level={TitleLevel.H6Regular}
+            className="!text-3xl !leading-[1.125] !tracking-[-0.96px]"
+            as="h2"
+          >
             {content.title}
           </Title>
         </motion.div>
         {content.description && (
-          <motion.div {...itemProps} className="col-span-full lg:col-span-7">
-            <Title level={TitleLevel.H6Regular} as="h3">
-              {content.description}
-            </Title>
+          <motion.div {...itemProps} className="col-span-full lg:col-span-6">
+            <Text variant={TextVariant.Body}>{content.description}</Text>
           </motion.div>
         )}
-        {content.cta?.label && (
-          <motion.div {...itemProps} className="col-span-full block sm:col-span-3">
-            <Button variant={ButtonVariants.Secondary} asChild fullWidth size={ButtonSizes.Small}>
-              <Link href={content.cta.href}>{content.cta.label}</Link>
-            </Button>
-          </motion.div>
-        )}
+
         {children && (
           <div className="col-span-full grid grid-cols-9 gap-x-[min(2.25vw,_32px)] gap-y-10 pt-2">
             {children}
