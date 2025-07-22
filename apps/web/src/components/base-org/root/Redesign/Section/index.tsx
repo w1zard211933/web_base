@@ -78,7 +78,7 @@ export function Section({ content, children, className, disableWrapperAnimation 
   return (
     <Container className={classNames('relative lg:py-40', className)}>
       <WrapperComponent
-        className="col-span-full grid grid-cols-12 gap-x-[min(2.25vw,_32px)] gap-y-8"
+        className="col-span-full grid grid-cols-12 gap-x-[min(2.25vw,_32px)] gap-y-0"
         {...(!disableWrapperAnimation && {
           variants: contentVariants,
           initial: 'hidden',
@@ -86,54 +86,56 @@ export function Section({ content, children, className, disableWrapperAnimation 
           viewport: viewport,
         })}
       >
-        <div className="flex col-span-full justify-between items-center">
-          {content.prefix && (
-            <motion.div {...itemProps} className="col-span-full">
-              <Image
+        {content.prefix && (
+          <motion.div {...itemProps} className="col-span-full">
+            {/* <Image
                 src={content.prefix.src}
                 alt={content.prefix.alt}
                 width={content.prefix.width}
                 height={content.prefix.height}
                 draggable={false}
-              />
-            </motion.div>
-          )}
-          <div>
-            {content.cta?.label && (
-              <motion.div {...itemProps} className="block col-span-full sm:col-span-3">
-                {/* <Button
-                  variant={ButtonVariants.Secondary}
-                  asChild
-                  fullWidth={false}
-                  size={ButtonSizes.Large}
-                >
-                  <Link href={content.cta.href}>{content.cta.label}</Link>
-                </Button> */}
-                <Link href={content.cta.href}>
-                  <AnimatedButton
-                    text={content.cta.label}
-                    backgroundColor="#0000ff20"
-                    textColor="#0000ff"
-                  />
-                </Link>
-              </motion.div>
-            )}
-          </div>
-        </div>
-        <motion.div {...itemProps} className="col-span-full lg:col-span-6 lg:max-w-[450px]">
+              /> */}
+            <Title
+              level={TitleLevel.H6Regular}
+              className="!text-3xl !leading-[1.125] !tracking-[-0.96px]"
+              as="h2"
+            >
+              {content?.prefix?.alt}
+            </Title>
+          </motion.div>
+        )}
+
+        <motion.div {...itemProps} className="col-span-full lg:col-span-6 lg:max-w-[400px]">
           <Title
             level={TitleLevel.H6Regular}
-            className="!text-3xl !leading-[1.125] !tracking-[-0.96px]"
+            className="!text-3xl !leading-[1.125] !tracking-[-0.96px] !text-base-gray-200"
             as="h2"
           >
             {content.title}
           </Title>
         </motion.div>
-        {content.description && (
-          <motion.div {...itemProps} className="col-span-full lg:col-span-6">
-            <Text variant={TextVariant.Body}>{content.description}</Text>
-          </motion.div>
-        )}
+
+        <div className="flex flex-col col-span-full gap-6 mt-4 mb-8 lg:col-span-6 lg:mt-0">
+          {content.description && (
+            <motion.div {...itemProps} className="col-span-full lg:col-span-6 lg:max-w-[400px]">
+              <Text className="!text-base-gray-200" variant={TextVariant.Body}>
+                {content.description}
+              </Text>
+            </motion.div>
+          )}
+
+          {content.cta?.label && (
+            <motion.div {...itemProps} className="block col-span-full sm:col-span-3">
+              <Link href={content.cta.href}>
+                <AnimatedButton
+                  text={content.cta.label}
+                  backgroundColor="#0000ff"
+                  textColor="#fff"
+                />
+              </Link>
+            </motion.div>
+          )}
+        </div>
 
         {children && (
           <div className="col-span-full grid grid-cols-9 gap-x-[min(2.25vw,_32px)] gap-y-10 pt-2">
