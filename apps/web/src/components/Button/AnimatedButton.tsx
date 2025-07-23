@@ -18,7 +18,7 @@ export default function AnimatedButton({
   return (
     <button
       style={{ color: textColor }}
-      className="group relative flex h-[2.5rem] w-fit items-center gap-2 overflow-hidden rounded-md px-3 py-1 font-sans font-normal transition-all duration-200 active:scale-95"
+      className="group relative flex h-[2.5rem] w-fit items-center gap-2 overflow-hidden rounded-lg px-3 py-1 font-sans font-normal transition-all duration-200 active:scale-95"
     >
       <div
         style={{ backgroundColor }}
