@@ -27,12 +27,12 @@ export function ContextMenu({ children }: { children: React.ReactNode }) {
       <DropdownMenu.Trigger asChild disabled>
         <div onContextMenu={handleContextMenu}>{children}</div>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content className="fixed left-8 top-2 z-[200] flex h-fit w-fit -translate-x-1/2 flex-col rounded-lg border border-base-black bg-base-white p-1">
+      <DropdownMenu.Content className="fixed left-8 top-2 z-[200] flex h-fit w-fit -translate-x-1/2 flex-col rounded-lg border !border-base-gray-150 bg-base-white p-1">
         <DropdownMenu.Item className="group w-full cursor-pointer rounded-[4px] p-2 !text-sm hover:bg-[#fafafa]">
           <Link
             download="/base-square.svg"
             href="/base-square.svg"
-            className="flex items-center gap-2"
+            className="flex gap-2 items-center"
             onClick={handleClick}
           >
             <DownloadIcon />
@@ -48,7 +48,7 @@ export function ContextMenu({ children }: { children: React.ReactNode }) {
           <Link
             download="/base-logo.svg"
             href="/base-logo.svg"
-            className="flex items-center gap-2"
+            className="flex gap-2 items-center"
             onClick={handleClick}
           >
             <DownloadIcon />
@@ -66,7 +66,7 @@ export function ContextMenu({ children }: { children: React.ReactNode }) {
             prefetch={false}
             download="/base-brand.zip"
             href="/base-brand.zip"
-            className="flex items-center gap-2"
+            className="flex gap-2 items-center"
             onClick={handleClick}
           >
             <FolderIcon />

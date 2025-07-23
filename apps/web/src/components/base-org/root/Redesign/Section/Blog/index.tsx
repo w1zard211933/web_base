@@ -202,7 +202,7 @@ function BlogCardContent({
                   animate={textConfig2.animate}
                   transition={textConfig2.transition}
                 >
-                  <Text variant={TextVariant.Body}>{subtitle}</Text>
+                  <Text variant={TextVariant.BodyLarge}>{subtitle}</Text>
                 </motion.div>
               </div>
             </div>

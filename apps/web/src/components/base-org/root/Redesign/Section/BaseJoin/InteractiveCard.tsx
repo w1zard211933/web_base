@@ -261,8 +261,8 @@ export function InteractiveCard({
         className="relative block h-[352px] flex-shrink-0 transform-gpu overflow-hidden rounded-t-[8px]"
         style={spanStyle}
       >
-        <div className="h-full w-full">
-          <div className="relative h-full w-full overflow-hidden">
+        <div className="w-full h-full">
+          <div className="overflow-hidden relative w-full h-full">
             {shader ? (
               <WebGLView
                 fragmentShader={interactiveCardFragmentShader}
@@ -275,7 +275,7 @@ export function InteractiveCard({
                 width={imageDimensions.width}
                 height={imageDimensions.height}
                 alt={title}
-                className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-200"
+                className="h-full w-full object-cover transition-transform duration-200 group-hover:scale-[1.03]"
               />
             )}
           </div>
@@ -284,7 +284,7 @@ export function InteractiveCard({
       <div className="flex min-h-[140px] w-full flex-1 flex-col justify-start gap-2 bg-[#fafafa] p-6 pt-12">
         <Title level={TitleLevel.H6Regular}>{title}</Title>
         <Text
-          variant={TextVariant.Body}
+          variant={TextVariant.BodyLarge}
           className="block min-h-[3.75em] overflow-hidden leading-[1.25em] !text-base-gray-200"
         >
           {description}

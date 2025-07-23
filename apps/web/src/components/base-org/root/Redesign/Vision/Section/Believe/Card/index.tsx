@@ -64,7 +64,7 @@ export function Card({ content }: { content: CardContent }) {
             <Title level={TitleLevel.H6Regular}>{content.title}</Title>
           </motion.div>
           <motion.div variants={itemContentVariants}>
-            <Text variant={TextVariant.Body} className="!text-base-gray-200">
+            <Text variant={TextVariant.BodyLarge} className="!text-base-gray-200">
               {content.description}
             </Text>
           </motion.div>

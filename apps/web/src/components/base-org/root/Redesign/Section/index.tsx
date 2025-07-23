@@ -78,7 +78,7 @@ export function Section({ content, children, className, disableWrapperAnimation 
   return (
     <Container className={classNames('relative lg:py-40', className)}>
       <WrapperComponent
-        className="col-span-full grid grid-cols-12 gap-x-[min(2.25vw,_32px)] gap-y-8"
+        className="col-span-full grid grid-cols-12 gap-x-[min(2.25vw,_32px)] gap-y-6 lg:gap-y-8"
         {...(!disableWrapperAnimation && {
           variants: contentVariants,
           initial: 'hidden',
@@ -97,7 +97,7 @@ export function Section({ content, children, className, disableWrapperAnimation 
               /> */}
             <Title
               level={TitleLevel.H6Regular}
-              className="-mb-8 !text-3xl !leading-[1.125] !tracking-[-0.96px]"
+              className="-mb-6 !text-3xl !leading-[1.125] !tracking-[-0.96px] lg:-mb-8"
               as="h2"
             >
               {content?.prefix?.alt}
@@ -117,10 +117,10 @@ export function Section({ content, children, className, disableWrapperAnimation 
           </Title>
         </motion.div>
 
-        <div className="flex flex-col col-span-full gap-6 mt-4 lg:col-span-6 lg:mt-0">
+        <div className="flex flex-col col-span-full gap-6 lg:col-span-6 lg:mt-0">
           {content.description && (
             <motion.div {...itemProps} className="col-span-full lg:col-span-6 lg:max-w-[400px]">
-              <Text className="!text-base-gray-200" variant={TextVariant.Body}>
+              <Text className="!text-base-gray-200" variant={TextVariant.BodyLarge}>
                 {content.description}
               </Text>
             </motion.div>
