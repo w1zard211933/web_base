@@ -4,13 +4,13 @@ import Title from 'apps/web/src/components/base-org/typography/TitleRedesign';
 import Text from 'apps/web/src/components/base-org/typography/TextRedesign';
 import { TextVariant } from 'apps/web/src/components/base-org/typography/TextRedesign/types';
 import { TitleLevel } from 'apps/web/src/components/base-org/typography/TitleRedesign/types';
-import {
-  Button,
-  ButtonSizes,
-  ButtonVariants,
-} from 'apps/web/src/components/Button/Redesign/Button';
+// import {
+//   Button,
+//   ButtonSizes,
+//   ButtonVariants,
+// } from 'apps/web/src/components/Button/Redesign/Button';
 import AnimatedButton from 'apps/web/src/components/Button/AnimatedButton';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion, Variants, cubicBezier } from 'motion/react';
 import Link from 'apps/web/src/components/Link';
 import Container from 'apps/web/src/components/base-org/Container';
@@ -120,7 +120,10 @@ export function Section({ content, children, className, disableWrapperAnimation 
         <div className="flex flex-col col-span-full gap-6 lg:col-span-6 lg:mt-0">
           {content.description && (
             <motion.div {...itemProps} className="col-span-full lg:col-span-6 lg:max-w-[400px]">
-              <Text className="!text-base-gray-200" variant={TextVariant.BodyLarge}>
+              <Text
+                className="!whitespace-pre-wrap !text-base-gray-200"
+                variant={TextVariant.BodyLarge}
+              >
                 {content.description}
               </Text>
             </motion.div>

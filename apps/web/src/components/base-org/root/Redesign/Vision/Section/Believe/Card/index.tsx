@@ -71,7 +71,7 @@ export function Card({ content }: { content: CardContent }) {
           <motion.div variants={itemContentVariants} className="">
             <Text
               variant={TextVariant.CaptionMono}
-              className="!text-xs !leading-none !text-black/40"
+              className="!text-xs !leading-[90%] !text-black/40"
             >
               {content.title}
             </Text>

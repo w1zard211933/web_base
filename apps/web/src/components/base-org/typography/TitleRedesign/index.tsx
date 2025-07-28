@@ -20,7 +20,8 @@ const defaultTags: Record<TitleLevel, ElementType> = {
 };
 
 export const levelStyles: Record<TitleLevel, string> = {
-  [TitleLevel.H0Medium]: 'font-sans text-[5rem] leading-[100%] tracking-[-0.25rem]',
+  [TitleLevel.H0Medium]:
+    'font-sans text-[3.5rem] lg:text-[5rem] leading-[100%] tracking-[-0.175rem] lg:tracking-[-0.25rem]',
   [TitleLevel.H1Medium]: 'font-sans text-[5rem] leading-[100%] font-medium tracking-[-0.25rem]',
   [TitleLevel.H1Regular]: 'font-sans text-[2.25rem] leading-[110%] tracking-[-0.0625rem]',
   [TitleLevel.H2Medium]:
