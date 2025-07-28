@@ -1,10 +1,10 @@
 'use client';
 import { Section } from 'apps/web/src/components/base-org/root/Redesign/Section';
 // import { DotsBackground } from 'apps/web/src/components/base-org/root/Redesign/Vision/Section/Why/dots-background';
-import Title from 'apps/web/src/components/base-org/typography/TitleRedesign';
-import { TitleLevel } from 'apps/web/src/components/base-org/typography/TitleRedesign/types';
-import Text from 'apps/web/src/components/base-org/typography/TextRedesign';
-import { TextVariant } from 'apps/web/src/components/base-org/typography/TextRedesign/types';
+// import Title from 'apps/web/src/components/base-org/typography/TitleRedesign';
+// import { TitleLevel } from 'apps/web/src/components/base-org/typography/TitleRedesign/types';
+// import Text from 'apps/web/src/components/base-org/typography/TextRedesign';
+// import { TextVariant } from 'apps/web/src/components/base-org/typography/TextRedesign/types';
 
 export function SectionWhy() {
   return (
