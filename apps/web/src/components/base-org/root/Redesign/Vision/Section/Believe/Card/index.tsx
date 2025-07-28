@@ -1,8 +1,8 @@
 'use client';
-import Title from 'apps/web/src/components/base-org/typography/TitleRedesign';
+// import Title from 'apps/web/src/components/base-org/typography/TitleRedesign';
 import Text from 'apps/web/src/components/base-org/typography/TextRedesign';
 import { TextVariant } from 'apps/web/src/components/base-org/typography/TextRedesign/types';
-import { TitleLevel } from 'apps/web/src/components/base-org/typography/TitleRedesign/types';
+// import { TitleLevel } from 'apps/web/src/components/base-org/typography/TitleRedesign/types';
 import { CardScene } from 'apps/web/src/components/base-org/root/Redesign/Vision/Section/Believe/Card/Scene';
 import { motion, Variants, cubicBezier } from 'motion/react';
 

@@ -96,7 +96,7 @@ export function Section({ content, children, className, disableWrapperAnimation 
                 draggable={false}
               /> */}
             <Title
-              level={TitleLevel.H6Regular}
+              level={TitleLevel.H1Regular}
               className="-mb-6 !text-3xl !leading-[1.125] !tracking-[-0.96px] lg:-mb-8"
               as="h2"
             >
@@ -107,7 +107,7 @@ export function Section({ content, children, className, disableWrapperAnimation 
 
         <motion.div {...itemProps} className="col-span-full lg:col-span-6 lg:max-w-[400px]">
           <Title
-            level={TitleLevel.H6Regular}
+            level={TitleLevel.H1Regular}
             className={classNames('!text-3xl !leading-[1.125] !tracking-[-0.96px]', {
               '!text-base-gray-200': content.prefix?.alt,
             })}

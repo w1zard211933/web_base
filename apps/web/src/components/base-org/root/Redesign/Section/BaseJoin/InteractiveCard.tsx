@@ -282,10 +282,10 @@ export function InteractiveCard({
         </div>
       </span>
       <div className="flex min-h-[140px] w-full flex-1 flex-col justify-start gap-2 bg-[#fafafa] p-6 pt-12">
-        <Title level={TitleLevel.H6Regular}>{title}</Title>
+        <Title level={TitleLevel.H2Regular}>{title}</Title>
         <Text
-          variant={TextVariant.BodyLarge}
-          className="block min-h-[3.75em] overflow-hidden leading-[1.25em] !text-base-gray-200"
+          variant={TextVariant.Body}
+          className="block min-h-[3.75em] overflow-hidden !text-base-gray-200"
         >
           {description}
         </Text>

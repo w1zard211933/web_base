@@ -10,11 +10,11 @@ import {
 import classNames from 'classnames';
 import { levelStyles } from 'apps/web/src/components/base-org/typography/TitleRedesign';
 import { variantStyles } from 'apps/web/src/components/base-org/typography/TextRedesign';
-import {
-  Button,
-  ButtonSizes,
-  ButtonVariants,
-} from 'apps/web/src/components/Button/Redesign/Button';
+// import {
+//   Button,
+//   ButtonSizes,
+//   ButtonVariants,
+// } from 'apps/web/src/components/Button/Redesign/Button';
 import AnimatedButton from 'apps/web/src/components/Button/AnimatedButton';
 import Text from 'apps/web/src/components/base-org/typography/TextRedesign';
 import { TextVariant } from 'apps/web/src/components/base-org/typography/TextRedesign/types';
@@ -65,7 +65,7 @@ function BlogCarouselControls({
           <motion.button
             key={post.title}
             onClick={onDotClick(index)}
-            className="relative w-10 h-10 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+            className="relative h-10 w-10 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
           >
             <motion.div
               animate={getBackgroundColor(index === currentIndex)}
@@ -107,9 +107,9 @@ function BlogCarousel() {
   const currentPost = displayedPosts[currentIndex];
 
   return (
-    <div className="overflow-hidden relative col-span-full rounded-lg">
+    <div className="relative col-span-full overflow-hidden rounded-lg">
       {/* blog card container */}
-      <div className="relative col-span-full h-[400px] md:h-[500px] lg:h-[700px]">
+      <div className="0-h-[400px] 0-md:h-[500px] 0-lg:h-[700px] relative col-span-full">
         <BlogCard
           title={currentPost.title}
           subtitle={currentPost.subtitle}
@@ -142,7 +142,7 @@ type BlogCardProps = {
 
 function BlogCardSlideNumber({ slideNumber }: { slideNumber: number }) {
   return (
-    <div className="hidden absolute left-0 -top-12 justify-center items-center w-12 h-12 rounded-tr-md bg-base-gray-25 xl:flex">
+    <div className="absolute -top-12 left-0 hidden h-12 w-12 items-center justify-center rounded-tr-md bg-base-gray-25 xl:flex">
       {/* slide number on the top left */}
       <motion.span
         className={classNames(variantStyles['body-mono'], 'text-base-black')}
@@ -178,8 +178,8 @@ function BlogCardContent({
           exit="exit"
           transition={blogCardTransition}
         >
-          <div className="p-4 pt-8 w-full sm:pt-12 md:px-6 md:py-12 xl:px-12">
-            <div className="flex justify-between items-end">
+          <div className="w-full p-4 pt-8 sm:pt-12 md:px-6 md:py-12 xl:px-12">
+            <div className="flex items-end justify-between">
               {/* text */}
               <div className="flex flex-1 flex-col gap-4 md:max-w-[380px] lg:max-w-[420px] xl:h-36 xl:max-w-[600px]">
                 <motion.h5
@@ -233,7 +233,7 @@ function BlogCard({
     <Link
       href={href}
       target={href.startsWith('https') ? '_blank' : '_self'}
-      className={classNames('flex overflow-hidden relative flex-col w-full h-full', className)}
+      className={classNames('relative flex h-full w-full flex-col overflow-hidden', className)}
     >
       <BlogCardImage
         backgroundImage={backgroundImage}
