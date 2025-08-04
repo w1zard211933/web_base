@@ -35,7 +35,7 @@ export default function BuyRealThings() {
     <section ref={ref} className="col-span-full py-12 text-black">
       <div className="flex flex-col gap-12 justify-between items-center md:flex-row md:gap-24">
         <div className="flex flex-col gap-8 md:max-w-sm">
-          <Title level={TitleLevel.H1Regular}>Buy real things.</Title>
+          <Title level={TitleLevel.H1Regular}>Buy real things</Title>
           <Title level={TitleLevel.H2Regular}>
             Available soon at millions of US Shopify stores, with a growing list of merchants
             accepting Base Pay.
