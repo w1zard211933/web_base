@@ -35,7 +35,7 @@ export const levelStyles: Record<TitleLevel, string> = {
   [TitleLevel.H4Mono]:
     'font-mono text-[2.25rem] lg:text-[4rem] leading-[110%] tracking-[-0.1125rem] font-light',
   [TitleLevel.H4MonoSmall]:
-    'font-mono text-[1.75rem] lg:text-[3rem] leading-[110%] tracking-[-0.0875rem] font-light',
+    'font-mono text-[1.625rem] lg:text-[2rem] leading-[105%] tracking-[-0.04875rem] font-light',
   [TitleLevel.H5Medium]:
     'font-sans text-[1.625rem] lg:text-[2rem] leading-[105%] tracking-[-0.04875rem] font-medium',
   [TitleLevel.H5Regular]:

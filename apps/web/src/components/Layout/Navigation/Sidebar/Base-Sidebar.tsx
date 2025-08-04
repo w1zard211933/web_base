@@ -344,7 +344,7 @@ export function BaseNavigation({ isMobile = false }: { isMobile?: boolean }) {
             exit={{ opacity: 0 }}
           >
             <Button
-              variant={ButtonVariants.Secondary}
+              variant={ButtonVariants.SecondaryOutline}
               size={ButtonSizes.Small}
               asChild
               className="w-full"

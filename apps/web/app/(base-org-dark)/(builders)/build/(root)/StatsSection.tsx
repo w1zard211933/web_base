@@ -16,11 +16,11 @@ function StatRow({
   animated: boolean;
 }) {
   return (
-    <div className="flex items-end gap-4">
-      <Title level={TitleLevel.H5Regular} as="div" className="font-light leading-none">
+    <div className="flex gap-4 items-end">
+      <Title level={TitleLevel.H4MonoSmall} as="div" className="font-light leading-none">
         {prefix}
         {animated ? (
-          <AnimatedText text={value} className="!font-mono" titleLevel={TitleLevel.H4Mono} />
+          <AnimatedText text={value} className="!font-mono" titleLevel={TitleLevel.H4MonoSmall} />
         ) : (
           value
         )}
