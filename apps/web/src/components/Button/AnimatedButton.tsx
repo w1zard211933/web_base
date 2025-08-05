@@ -1,5 +1,3 @@
-import React from 'react';
-
 type AnimatedButtonProps = {
   text?: string;
   backgroundColor?: string;
@@ -17,6 +15,7 @@ export default function AnimatedButton({
 }: AnimatedButtonProps) {
   return (
     <button
+      type="button"
       style={{ color: textColor }}
       className="group relative flex h-[2.5rem] w-fit items-center gap-2 overflow-hidden rounded-lg px-3 py-1 font-sans font-normal transition-all duration-200 active:scale-95"
     >
