@@ -48,7 +48,7 @@ export function StatsSection({ description, statItems, animated = false }: Props
       <Title level={TitleLevel.H1Regular} as="div" className="max-w-[400px]">
         {description}
       </Title>
-      {/* <div className="max-w-[400px] text-3xl leading-none">{description}</div> */}
+
       <div className="flex flex-col gap-8">
         {statItems.map(({ value, label, unit, prefix }) => (
           <StatRow

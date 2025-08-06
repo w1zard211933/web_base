@@ -4,13 +4,8 @@ import Title from 'apps/web/src/components/base-org/typography/TitleRedesign';
 import Text from 'apps/web/src/components/base-org/typography/TextRedesign';
 import { TextVariant } from 'apps/web/src/components/base-org/typography/TextRedesign/types';
 import { TitleLevel } from 'apps/web/src/components/base-org/typography/TitleRedesign/types';
-// import {
-//   Button,
-//   ButtonSizes,
-//   ButtonVariants,
-// } from 'apps/web/src/components/Button/Redesign/Button';
 import AnimatedButton from 'apps/web/src/components/Button/AnimatedButton';
-// import Image from 'next/image';
+
 import { motion, Variants, cubicBezier } from 'motion/react';
 import Link from 'apps/web/src/components/Link';
 import Container from 'apps/web/src/components/base-org/Container';
@@ -88,13 +83,6 @@ export function Section({ content, children, className, disableWrapperAnimation 
       >
         {content.prefix && (
           <motion.div {...itemProps} className="col-span-full">
-            {/* <Image
-                src={content.prefix.src}
-                alt={content.prefix.alt}
-                width={content.prefix.width}
-                height={content.prefix.height}
-                draggable={false}
-              /> */}
             <Title
               level={TitleLevel.H1Regular}
               className="-mb-6 !text-3xl !leading-[1.125] !tracking-[-0.96px] lg:-mb-8"

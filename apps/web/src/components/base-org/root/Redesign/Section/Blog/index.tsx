@@ -10,11 +10,7 @@ import {
 import classNames from 'classnames';
 import { levelStyles } from 'apps/web/src/components/base-org/typography/TitleRedesign';
 import { variantStyles } from 'apps/web/src/components/base-org/typography/TextRedesign';
-// import {
-//   Button,
-//   ButtonSizes,
-//   ButtonVariants,
-// } from 'apps/web/src/components/Button/Redesign/Button';
+
 import AnimatedButton from 'apps/web/src/components/Button/AnimatedButton';
 import Text from 'apps/web/src/components/base-org/typography/TextRedesign';
 import { TextVariant } from 'apps/web/src/components/base-org/typography/TextRedesign/types';
@@ -25,14 +21,7 @@ export function SectionBlog() {
   return (
     <Section content={content}>
       <BlogCarousel />
-      {/* <Button
-        variant={ButtonVariants.Secondary}
-        asChild
-        className="col-span-full sm:col-span-3"
-        size={ButtonSizes.Small}
-      >
-        <Link href="https://blog.base.org">Read more</Link>
-      </Button> */}
+
       <Link href="https://blog.base.org">
         <AnimatedButton text="Read more" />
       </Link>

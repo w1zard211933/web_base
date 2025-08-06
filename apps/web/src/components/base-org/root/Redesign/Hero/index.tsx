@@ -1,7 +1,5 @@
 import Container from 'apps/web/src/components/base-org/Container';
 import AsciiFluidScene from 'apps/web/src/components/WebGL/Scenes/AsciiFluidScene';
-// import defaultImg from 'apps/web/public/images/backgrounds/default.webp';
-// import spaceImg from 'apps/web/public/images/backgrounds/space2.webp';
 import spaceCropImg from 'apps/web/public/images/backgrounds/space-crop.webp';
 import { AnimatedTitle } from 'apps/web/src/components/base-org/root/Redesign/Hero/AnimatedTitle';
 
