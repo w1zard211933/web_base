@@ -4560,6 +4560,14 @@
     "subcategory": "creator"
   },
   {
+    "name": "Suby",
+    "description": "Crypto payment layer for paid communities on Telegram & Discord — instant access, recurring subs, multi-chain support.",
+    "url": "https://suby.fi",
+    "imageUrl": "/images/partners/suby.png",
+    "category": "consumer",
+    "subcategory": "payments"
+  },
+  {  
     "name": "KOLZ",
     "description": "A cutting-edge Web3 influencer platform designed to bridge the gap between leading influencers in the cryptocurrency and blockchain space (known as KOLs - Key Opinion Leaders) and their followers.",
     "url": "https://kolz.chat/",
