@@ -134,3 +134,10 @@ By opening a PR to add your project, you authorize and license Coinbase on a non
 ---
 
 If you have any questions, please reach out to us in #developer-chat in the [Base Discord](https://base.org/discord).
+
+### Developer Tips
+
+- Make sure to use the latest Node.js version supported by nvm.  
+- Run `corepack enable` if Yarn commands are not recognized.  
+- Keep dependencies updated by running `yarn install` regularly.
+
